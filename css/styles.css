@@ -1,0 +1,92 @@
+header > h1 {
+
+    color: lightblue;
+    
+    background-color: blue;
+    
+    }
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto {
+    width: 400px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: coral;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .producto {
+        width: 100%;
+    }
+}
+
+.reseñas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.reseña {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.reseña img {
+    max-width: 100%;
+}
+
+/* Personaliza los colores y fuentes según tu preferencia */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #89d22b;
+}
+
+.reseña {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reseña h3 {
+    color: #333;
+}
+
+.reseña p {
+    color: #666;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
