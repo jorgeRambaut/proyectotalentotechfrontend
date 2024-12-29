@@ -45,17 +45,49 @@ function actualizarCarrito() {
   elementoTotal.textContent = total;
 }
 
-function validarFormulario() {
-  const nombre = document.getElementById('nombre').value;
-  const email = document.getElementById('email').value;
-  const mensaje = document.getElementById('mensaje').value;
 
-  if (nombre === '' || email === '' || mensaje === '') {
-    console.error('Por favor, completa todos los campos del formulario.');
-  } else {
-    console.log('Formulario enviado correctamente.');
+const formulario = document.getElementById('formulario');
+const nombreInput = document.getElementById('nombre');
+const emailInput = document.getElementById('email');
+const mensajeInput = document.getElementById('mensaje');
+const errorNombre = document.getElementById('error-nombre');
+const errorEmail = document.getElementById('error-email');
+
+formulario.addEventListener('submit', (event) => {
+  event.preventDefault(); // Evita el envío del formulario por defecto
+
+  const nombre = nombreInput.value;
+  const email = emailInput.value;
+  const mensaje = mensajeInput.value;
+
+  // Restablecer mensajes de error
+  errorNombre.textContent = '';
+  errorEmail.textContent = '';
+
+  // Validaciones
+  if (nombre === '') {
+    errorNombre.textContent = 'Por favor, ingresa tu nombre.';
   }
+
+  if (email === '' || !isValidEmail(email)) {
+    errorEmail.textContent = 'Por favor, ingresa una dirección de correo electrónico válida.';
+  }
+
+  if (nombre && email && mensaje && isValidEmail(email)) {
+    // Si todos los campos son válidos, envía los datos al servidor
+    console.log('Formulario enviado:', { nombre, email, mensaje });
+
+    // Aquí puedes agregar código para enviar los datos a un servidor
+    // utilizando fetch, XMLHttpRequest o una biblioteca como Axios
+  }
+});
+
+function isValidEmail(email) {
+  // Expresión regular básica para validar correos electrónicos
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }
+
 
 // Array de objetos que representan los productos 
 const productos1 = [
