@@ -23,24 +23,38 @@
             <p>Este es el contenido de la sección de inicio.</p>
     </section>
 
+    <ul id="lista-productos"></ul>
+
     <section id="productos">
         <h2>Nuestros Productos</h2>
         <p>Aquí encontrarás una lista de nuestros productos.</p>   
         <section class="productos">
-            <div class="producto">
+            <div class="producto" data-descripcion="Esta es una descripción detallada del producto 1.">
                 <img src="media\messi.jpeg" alt="Producto 1">
                 <h3>Producto 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto assumenda provident impedit numquam vel, culpa doloribus sunt non ipsum harum. Culpa illo nesciunt ut eaque sapiente, assumenda nihil odio?.</p>
+                <p class="precio">Precio: $10</p>
+                <input type="number" min="1" value="1" class="cantidad">
+                <button class="agregar-al-carrito" data-producto="1">Agregar al carrito</button>
+                <button class="mostrar-descripcion">Ver más</button>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="producto">
+            <div class="producto"data-descripcion="Esta es una descripción detallada del producto 2." >
                 <img src="media\messi 2.jpeg" alt="Producto 2">
                 <h3>Producto 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque optio consequuntur possimus harum qui cumque, officia aliquam numquam tempora velit unde necessitatibus error repellendus modi iure eius explicabo esse at!</p>       
+                <p class="precio">Precio: $10</p>
+                <input type="number" min="1" value="1" class="cantidad">
+                <button class="agregar-al-carrito" data-producto="2">Agregar al carrito</button>
+                <button class="mostrar-descripcion">Ver más</button>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="producto">
+            <div class="producto" data-descripcion="Esta es una descripción detallada del producto 3.">
                 <img src="media\messi3.jpeg" alt="Producto 3">
+                <button class="agregar-al-carrito" data-producto="3">Agregar al carrito</button>
                 <h3>Producto 3</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consequatur a quisquam, ipsam necessitatibus neque distinctio quia sint, adipisci dolores reprehenderit maiores repellendus ut ratione, nemo vel! Vero, dolor modi.</p>       
+                <p class="precio">Precio: $10</p>
+                <input type="number" min="1" value="1" class="cantidad">
+                <button class="mostrar-descripcion">Ver más</button>
+                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </section> 
     </section>
@@ -82,12 +96,18 @@
                 </div>
             </section>
     </section> 
-
+    
+    <section id="carrito">
+        <h2>Carrito de compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: <span id="total">0</span></p>
+      </section>
+    
+      <script src="js\scripts.js"></script>
  
     <footer>
         <p>Todos los Derechos Reservados</p>
     </footer>
-    <script src="script.js"></script>
 
 </body>
 
