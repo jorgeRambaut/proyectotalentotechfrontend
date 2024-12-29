@@ -90,3 +90,8 @@ nav a {
     color: #333;
 }
 
+.descripcion {
+    display: none;
+    margin-top: 10px;
+  }
+
