@@ -87,13 +87,15 @@
                 </div>
                 <div class="contacto-formulario">
                     <h2>Formulario de Contacto</h2>
-                    <form>
-                        <input type="text" placeholder="Nombre">
-                        <input type="email" placeholder="Email">
-                        <textarea placeholder="Mensaje"></textarea>
-                        <button type="submit">Enviar</button>
+                    <form id="formulario">
+                      <input type="text" id="nombre" placeholder="Nombre">
+                      <span id="error-nombre" class="error"></span>
+                      <input type="email" id="email" placeholder="Email">
+                      <span id="error-email" class="error"></span>
+                      <textarea id="mensaje" placeholder="Mensaje"></textarea>
+                      <button type="submit" id="boton-enviar">Enviar</button>
                     </form>
-                </div>
+                  </div>
             </section>
     </section> 
     
